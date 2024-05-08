@@ -1,0 +1,22 @@
+{
+  "name": "hooks-test",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "node --import ./src/register.js ./index.js"
+  },
+  "type": "module",
+  "exports": {
+    "./register": "./src/register.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "ses": "^1.5.0"
+  },
+  "devDependencies": {
+    "@types/node": "^20.12.11"
+  }
+}
