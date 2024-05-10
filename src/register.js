@@ -1,26 +1,65 @@
-import 'ses';
+import { register } from "node:module";
 
-import {register} from 'node:module';
+const policiesToTry = [
+  {
+    resources: {
+      pkg: {
+        builtin: {
+          "node:fs": true,
+        },
+        globals: {
+          process: true,
+        },
+      },
+    },
+  },
+  {
+    resources: {
+      pkg: {
+        builtin: {
+          "node:fs": ['readdirSync'],
+        },
+        globals: {
+          process: true,
+        },
+      },
+    },
+  },
+  {
+    resources: {
+      pkg: {
+        builtin: {
+          "node:fs": ['readFileSync'],
+        },
+        globals: {
+          process: true,
+        },
+      },
+    },
+  },
+  {
+    resources: {
+      pkg: {
+        builtin: {
+          "node:fs": true,
+        },
+        globals: {
+        },
+      },
+    },
+  },
+  {
+    resources: {
+      pkg: {
+        
+      },
+    },
+  },
+];
 
-lockdown({
-  // gives a semi-high resolution timer
-  dateTaming: 'unsafe',
-  // this is introduces non-determinism, but is otherwise safe
-  mathTaming: 'unsafe',
-  // lets code observe call stack, but easier debuggability
-  errorTaming: 'unsafe',
-  // shows the full call stack
-  stackFiltering: 'verbose',
-  // prevents most common override mistake cases from tripping up users
-  overrideTaming: 'severe',
-  // preserves JS locale methods, to avoid confusing users
-  // prevents aliasing: toLocaleString() to toString(), etc
-  localeTaming: 'unsafe',
+
+register("./hooks.js", import.meta.url, {
+  data: {
+    policy: policiesToTry[0]
+  },
 });
-
-
-register('./hooks.js', import.meta.url, {
-  data: {stuff: 'things'}
-});
-register('./more-hooks.js', import.meta.url);
-

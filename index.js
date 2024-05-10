@@ -1,2 +1,7 @@
-console.log('this should read "hello world":');
+import { hello } from "pkg";
+console.log(`
+
+====================================================
+
+`)
 console.log(hello)

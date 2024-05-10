@@ -14,6 +14,7 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "pkg": "file:pkg",
     "ses": "^1.5.0"
   },
   "devDependencies": {
