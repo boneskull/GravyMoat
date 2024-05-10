@@ -1,7 +1,7 @@
-import { hello } from "pkg";
+import { hello } from 'pkg';
 console.log(`
 
 ====================================================
 
-`)
-console.log(hello)
+`);
+console.log(hello);

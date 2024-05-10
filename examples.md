@@ -1,7 +1,9 @@
+# GravyMoat Examples
+
 ```js
-import fs from "node:fs";
+import fs from 'node:fs';
 const cwd = process.cwd();
-const dir = fs.readdirSync(".");
+const dir = fs.readdirSync('.');
 ```
 
 ---
@@ -15,7 +17,7 @@ globals: {
 },
 ```
 
-```
+```text
 /home/naugtur/repo/hooks-test
 .git,.gitignore,README.md,gravymoat-logo.png,gravymoat-logo.svg,index.js,node_modules,package-lock.json,package.json,pkg,src
 ```
@@ -28,7 +30,7 @@ builtin: {
 },
 ```
 
-```
+```text
 Error: Not allowed to load module node:fs from pkg
 ```
 
@@ -40,16 +42,17 @@ builtin: {
 },
 ```
 
-```
+```text
 Error: fs.readdirSync is not a function
 ```
 
 ---
 
 ```js
-globals: {}
+globals: {
+}
 ```
 
-```
+```text
 Error: Cannot read properties of undefined (reading 'cwd')
 ```

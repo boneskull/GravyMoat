@@ -1,21 +1,34 @@
 # GravyMoat
 
-![](./gravymoat-logo.png)
+![gravymoat logo](./gravymoat-logo.png)
 
-*Not as hot as lava, but still sticky.*
+_Not as hot as lava, but still sticky._
 
+> A doomed attempt at rebuilding LavaMoat with Node.js' [module customization hooks](https://nodejs.org/api/module.html#customization-hooks).
 
-A doomed attempt at rebuilding LavaMoat with Node.js loaders.
+## Prerequisites
 
-try it:
+Node.js v20.0.0+
+
+## Try It
+
+Install and run:
+
 ```bash
-  npm install && \
-  npm start
+npm install && npm start
 ```
 
-go to `register.js` and try different policies from the list.
+You can then:
 
-Or take a quickl look at [examples](./examples.md)
+- Open `register.js` and try different policies from the list. Try your own!
+- Feeling lazy? You can see [what would happen](./examples.md) if you did.
 
+> Note: It's using a simplified policy and doesn't support relative specifiers inside `node_modules`, so don't change the example too much
 
-> Note: It's using a simplified policy and doesn't support relative specifiers inside node_modules, so don't change the example too much
+## Disclaimer
+
+The gravy is not fit for human consumption.
+
+## License
+
+Copyright © 2024 Consensys, Inc. Licensed MIT

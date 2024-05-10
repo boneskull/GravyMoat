@@ -1,11 +1,12 @@
-import fs from "node:fs";
+import fs from 'node:fs';
+
 let dir;
 try {
-  dir = fs.readdirSync(".");
+  dir = fs.readdirSync('.');
 } catch (e) {
-  dir = e.message + ' meanwhile, readFileSync is '+typeof fs.readFileSync;
+  dir = e.message + ' meanwhile, readFileSync is ' + typeof fs.readFileSync;
 }
-let cwd = "unknown";
+let cwd = 'unknown';
 try {
   cwd = process.cwd();
 } catch (e) {
