@@ -4,7 +4,7 @@
 
 _Not as hot as lava, but still sticky._
 
-> A doomed attempt at rebuilding LavaMoat with Node.js' [module customization hooks](https://nodejs.org/api/module.html#customization-hooks).
+> A cursed attempt at rebuilding LavaMoat with Node.js' [module customization hooks](https://nodejs.org/api/module.html#customization-hooks).
 
 ## Prerequisites
 
