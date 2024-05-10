@@ -8,13 +8,15 @@
   },
   "type": "module",
   "exports": {
-    "./register": "./src/register.js"
+    "./register": "./src/register.js",
+    "./runtime": "./src/runtime.js"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "ses": "^1.5.0"
+    "ses": "^1.5.0",
+    "left-pad": "^1.3.0"
   },
   "devDependencies": {
     "@types/node": "^20.12.11"
